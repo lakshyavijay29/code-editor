@@ -1,8 +1,7 @@
 import CodeEditor from "@/components/CodeEditor";
 import HelperHeader from "@/components/HelperHeader";
+import RenderCode from "@/components/RenderCode";
 import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from "@/components/ui/resizable";
-import { RootState } from "@/redux/store";
-import { useSelector } from "react-redux";
 
 
 export default function Compiler() {
@@ -16,7 +15,8 @@ export default function Compiler() {
         </ResizablePanel>
       <ResizableHandle withHandle />
       <ResizablePanel className="h-[calc(100dvh-70px)] min-w-[350px]"
-        defaultSize={50}>Two
+        defaultSize={50}>
+          <RenderCode />
         </ResizablePanel>
     </ResizablePanelGroup>
   )

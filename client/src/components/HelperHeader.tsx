@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
-import { Save, Share2 } from 'lucide-react';
+import { Save, Share2, Fullscreen} from 'lucide-react';
+import { Link } from "react-router-dom";
 
 import {
   Select,
@@ -26,6 +27,11 @@ export default function HelperHeader() {
         <Button className="flex gap-1 justify-end" variant="secondary">
           <Share2 size={20} /> Share
         </Button>
+        <Link to="/fullscreen">
+        <Button className="flex gap-1 justify-end" variant="secondary">
+        <Fullscreen size={16} strokeWidth={1} /> Full Screen
+        </Button>
+        </Link>
       </div>
       <div className="__tab_switcher flex ml-2 justify-center items-center">
         <small>Language: </small>
